@@ -1,0 +1,130 @@
+.project-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-link:hover h3 {
+  color: var(--bronze);
+}
+
+.project-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #172d2d;
+  cursor: zoom-in;
+}
+
+.project-video .visual-label {
+  z-index: 1;
+}
+
+.video-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background: rgba(16, 45, 46, .9);
+}
+
+.video-lightbox[hidden] {
+  display: none;
+}
+
+.video-lightbox video {
+  width: min(1100px, 100%);
+  max-height: calc(100vh - 64px);
+  border: 8px solid #f2efe6;
+  background: #101f20;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .4);
+}
+
+.video-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  border: 1px solid rgba(242, 239, 230, .55);
+  background: #183c3b;
+  color: #f2efe6;
+  padding: 8px 12px;
+  font: 11px var(--mono);
+  cursor: pointer;
+}
+
+body.video-lightbox-open {
+  overflow: hidden;
+}
+
+@media (max-width: 650px) {
+  .video-lightbox {
+    padding: 18px;
+  }
+
+  .video-lightbox video {
+    border-width: 4px;
+    max-height: calc(100vh - 36px);
+  }
+}
+
+.experience-item {
+  grid-template-areas:
+    "date context type"
+    "gallery context type";
+}
+
+.experience-item > .experience-date {
+  grid-area: date;
+}
+
+.experience-item > div:not(.experience-gallery) {
+  grid-area: context;
+}
+
+.experience-item > .experience-type {
+  grid-area: type;
+}
+
+.experience-gallery {
+  display: grid;
+  grid-area: gallery;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  width: 180px;
+  margin-top: 12px;
+  padding: 6px;
+  border: 1px solid rgba(20, 44, 45, .28);
+  background: rgba(242, 239, 230, .34);
+}
+
+.experience-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 2px solid #f2efe6;
+  box-shadow: 0 2px 8px rgba(20, 44, 45, .16);
+  filter: saturate(.78) contrast(.96);
+  transition: filter .2s, transform .2s;
+}
+
+.experience-gallery img:hover {
+  filter: saturate(1) contrast(1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 650px) {
+  .experience-item {
+    grid-template-areas:
+      "date type"
+      "gallery context";
+    grid-template-columns: 180px 1fr;
+  }
+
+  .experience-gallery {
+    width: min(180px, 100%);
+  }
+}
