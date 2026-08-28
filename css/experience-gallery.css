@@ -70,6 +70,57 @@ body.video-lightbox-open {
   }
 }
 
+@media (min-width: 651px) {
+  .experience-item {
+    grid-template-areas: none;
+    grid-template-columns: 230px minmax(0, 1fr) 38px;
+    column-gap: clamp(28px, 4vw, 56px);
+    row-gap: 12px;
+    padding: 34px 0;
+  }
+
+  .experience-item > .experience-date,
+  .experience-item > div:not(.experience-gallery),
+  .experience-item > .experience-type,
+  .experience-item > .experience-gallery {
+    grid-area: auto;
+  }
+
+  .experience-item > div:not(.experience-gallery) {
+    border-left: 1px solid rgba(177, 135, 98, .65);
+    padding-left: 26px;
+    width: 100%;
+    max-width: 720px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+  }
+
+  .experience-item h3 {
+    font-size: 27px;
+    line-height: 1.05;
+    margin-bottom: 9px;
+  }
+
+  .experience-place {
+    margin-bottom: 13px;
+  }
+
+  .experience-item div p:last-child {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .experience-gallery {
+    width: 230px;
+    padding: 8px;
+    gap: 8px;
+    margin-top: -98px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
 .experience-item {
   grid-template-areas:
     "date context type"
@@ -120,11 +171,67 @@ body.video-lightbox-open {
   .experience-item {
     grid-template-areas:
       "date type"
-      "gallery context";
-    grid-template-columns: 180px 1fr;
+      "context context"
+      "gallery gallery";
+    grid-template-columns: 1fr auto;
+    gap: 0;
+  }
+
+  .experience-item > div:not(.experience-gallery) {
+    margin-top: 18px;
   }
 
   .experience-gallery {
-    width: min(180px, 100%);
+    width: 100%;
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 651px) {
+  .experience-item {
+    grid-template-areas: none;
+    grid-template-columns: 230px minmax(0, 1fr) 38px;
+    column-gap: clamp(28px, 4vw, 56px);
+    row-gap: 12px;
+    padding: 34px 0;
+  }
+
+  .experience-item > .experience-date,
+  .experience-item > div:not(.experience-gallery),
+  .experience-item > .experience-type,
+  .experience-item > .experience-gallery {
+    grid-area: auto;
+  }
+
+  .experience-item > div:not(.experience-gallery) {
+    border-left: 1px solid rgba(177, 135, 98, .65);
+    padding-left: 26px;
+  }
+
+  .experience-item h3 {
+    font-size: 27px;
+    line-height: 1.05;
+    margin-bottom: 9px;
+  }
+
+  .experience-place {
+    margin-bottom: 13px;
+  }
+
+  .experience-item div p:last-child {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .experience-item > .experience-gallery {
+    width: 230px;
+    height: 206px;
+    padding: 8px;
+    gap: 8px;
+    align-content: center;
+    overflow: hidden;
+    margin-top: -98px;
+    position: relative;
+    z-index: 1;
   }
 }
