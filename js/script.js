@@ -67,3 +67,19 @@ videoLightbox.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && !videoLightbox.hidden) closeVideoLightbox();
 });
+
+const visitorCount = document.querySelector('[data-visitor-count]');
+
+if (visitorCount) {
+  fetch('/.netlify/functions/visitor-count', { headers: { Accept: 'application/json' } })
+    .then((response) => {
+      if (!response.ok) throw new Error('Visitor count unavailable');
+      return response.json();
+    })
+    .then(({ count }) => {
+      visitorCount.textContent = Number(count).toLocaleString();
+    })
+    .catch(() => {
+      visitorCount.textContent = '—';
+    });
+}
