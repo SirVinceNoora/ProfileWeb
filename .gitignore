@@ -1,0 +1,12 @@
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Local Netlify and tool state
+.netlify/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
