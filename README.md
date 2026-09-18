@@ -1,8 +1,28 @@
 # VCN / Vince Carlo C. Noora
 
+<p align="center">
+  <img src="assets/profile.jpeg" alt="Vince Carlo C. Noora" width="220">
+</p>
+
 Personal portfolio website for Vince Carlo C. Noora, an IT professional, systems developer, and UI/UX specialist.
 
 The site presents selected projects, professional experience, technical skills, and contact links in a responsive portfolio interface.
+
+## Visual Showcase
+
+<p align="center">
+  <img src="assets/ITSupportSpecialistAssets/atconferrence.jpg" alt="IT support conference" width="32%">
+  <img src="assets/PTLecturer/1787916510310.jpg" alt="Lecturer session" width="32%">
+  <img src="assets/ITTechnincian/1787916818872.jpg" alt="IT technician work" width="32%">
+</p>
+
+### Project Previews
+
+GitHub does not consistently play repository MP4 files inline in README pages. These links open the original video previews from the portfolio assets:
+
+- [Watch ICT-APP preview](assets/ICTAPPvideo/ICTAPP.mp4)
+- [Watch FTTS preview](assets/FTTSvideo/FTTS.mp4)
+- [Watch SolarSource gameplay preview](assets/SOLARSOURCE/DAY%203%20MOVEMENT%20AND%20COMBAT%20%28PROJECT%20SUNRISE%29.mp4)
 
 ## Features
 
